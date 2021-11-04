@@ -41,6 +41,7 @@ const App = () => {
         <h1>Pokédex</h1>
         <input
           type="text"
+          // onSubmit={searchPokemon}
           onChange={(event) => {
             setPokemonName(event.target.value);
           }}
@@ -48,7 +49,11 @@ const App = () => {
           placeholder="Search your Pokémon..."
         />
         <div>
-          {pokemonName && <button onClick={searchPokemon}>Search</button>}
+          {pokemonName && (
+            <button type="submit" onClick={searchPokemon}>
+              Search
+            </button>
+          )}
         </div>
       </div>
       <div className="DisplaySection">
